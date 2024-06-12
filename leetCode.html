@@ -4,18 +4,34 @@
 	<title></title>
 </head>
 <body>
+	<button id="green">Change To Green</button>
+	<button id="red">Change To Red</button>
+	<button id="black">Change To Black</button>
 
+	<div id="myDiv" style="border: 2px solid black; width: 200px; height: 200px;"></div>
 <script>
-	//Given an integer n, return a counter function. This counter function initially returns n and then returns 1 more than the previous value every subsequent time it is called (n, n + 1, n + 2, etc).
-	function counter(a) {
-		var c=[];
-		for(var i=0; i<=3; i++) {
-			console.log(i)
-		}
-		var pushing = i.push(c)
-		console.log(pushing);
-	}
-	counter(10)
+	var green = document.getElementById('green')
+	var red = document.getElementById('red')
+	var black = document.getElementById('black')
+	var myDiv = document.getElementById('myDiv')
+
+	green.addEventListener('click', function() {
+		myDiv.style.backgroundColor = 'green';
+		green.style.backgroundColor = 'green';
+		green.style.color = 'white';
+	})
+
+	red.addEventListener('click', function() {
+		myDiv.style.backgroundColor = 'red';
+		red.style.backgroundColor = 'red';
+		red.style.color = 'white';
+	})
+
+	black.addEventListener('click', function() {
+		myDiv.style.backgroundColor = 'black';
+		black.style.backgroundColor = 'black';
+		black.style.color = 'white';
+	})
 </script>
 </body>
 </html>

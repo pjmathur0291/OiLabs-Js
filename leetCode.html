@@ -1,21 +1,174 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title></title>
+	<style>
+		/* #myDiv {
+			width: 700px;
+			height: 620px;
+			margin: auto;
+			border: 5px solid black;
+		}
+
+		.innerCircle {
+			width: 200px;
+			height: 200px;
+			border: 2px solid black;
+			border-radius: 50%;
+			margin: auto;
+			margin-top: 50px;
+			background-size: cover;
+		}
+
+		.classRequired {
+			text-align: center;
+			padding-top: 20%;
+			font-size: 30px;
+			font-family: Arial, Helvetica, sans-serif;
+			display: none;
+		}
+
+		.btnClass {
+			width: 1000px;
+			height: auto;
+			margin: auto;
+			margin: auto;
+		}
+		.btnClass button{
+			margin-left: 140px;
+			margin-bottom: 10px;
+			padding: 20px;
+			cursor: no-drop;
+		} */
+
+
+
+		/* HERE IS THE STYLE FOR THE 3 BOOTSTRAP CARDS WITHOUT INCLUDING BOOTSTRAP */
+		/* body {
+			font-family: arial;
+		}
+
+		.btnClass {
+			width: 1000px;
+			height: auto;
+			margin: auto;
+			margin: auto;
+		}
+
+		.btnClass button {
+			margin-left: 140px;
+			margin-bottom: 10px;
+			padding: 20px;
+			cursor: no-drop;
+		}
+
+		.mainDiv {
+			width: 18rem;
+			height: auto;
+			margin: auto;
+			border: 1px solid black;
+			border-radius: 7px;
+			box-sizing: border-box;
+		}
+
+		.imgDiv {
+			width: 100%;
+			height: 20rem;
+		}
+
+		.headingDiv {
+			width: 100%;
+			height: auto;
+			padding-left: 10px;
+			padding-bottom: 0px !important;
+			color: #212529;
+			display: none;
+		}
+
+		.contentDiv {
+			width: 100%;
+			height: auto;
+		}
+
+		.mainContentDiv {
+			padding-left: 12px;
+			padding-bottom: 6px;
+			color: #212529;
+			display: none;
+		}
+
+		.btnDivMain {
+			background-color: #0d6efd;
+			color: white;
+			padding: .375rem .75rem;
+			font-size: 1rem;
+			border-radius: .25rem;
+			border: #0d6efd solid 1px;
+			line-height: 1.5;
+			text-align: center;
+			margin: 10px 0px 20px 12px;
+			display: none;
+		} */
+	</style>
 </head>
+
 <body>
-	<button id="green">Change To Green</button>
-	<button id="red">Change To Red</button>
-	<button id="black">Change To Black</button>
-	
-	<div id="myDiv" style="border: 2px solid black; width: 1000px; height: auto;"></div>
+	<!-- <div class="btnClass">
+		<button id="green">Change To Green</button>
+		<button id="red">Change To Red</button>
+		<button id="black">Change To Black</button>
+	</div>
+	<div id="myDiv">
+		<div class="innerCircle" id="innerCircle">
+
+		</div>
+		<div class="classRequired" id="classRequired">
+			Name: Pranjal Mathur <br>
+			Company: OiLabs
+		</div>
+	</div> -->
+
+
+
+	<!-- HERE IS THE HTML FOR THE 3 BOOTSTRAP CARDS WITHOUT INCLUDING BOOTSTRAP  -->
+	<!-- <div class="btnClass">
+		<button id="green">Change To Green</button>
+		<button id="red">Change To Red</button>
+		<button id="black">Change To Black</button>
+	</div>
+	<div class="mainDiv" id="mainDiv">
+		<div class="imgDiv" id="imgDiv"> -->
+			<!-- HERE ARE NEED TO ADD BACKGROUND IMAGE THROUGH JAVASCRIPT -->
+		<!-- </div>
+		<div class="contentDiv">
+			<div class="headingDiv">
+				<h3 id="headingDiv">
+					Pranjal Mathur
+				</h3>
+			</div>
+			<div class="mainContentDiv" id="mainContentDiv">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit veritatis perspiciatis, quia sit
+				id sunt atque ipsam laborum, illo doloribus architecto labore voluptatem velit sequi quis libero facere
+				accusantium. Esse!
+			</div>
+			<div class="btnDiv">
+				<button class="btnDivMain" id="btnDivMain">Go Somewhere</button>
+			</div>
+		</div>
+	</div> -->
 </body>
 <script>
-	var green = document.getElementById('green')
-	var red = document.getElementById('red')
-	var black = document.getElementById('black')
-	var myDiv = document.getElementById('myDiv')
+	// var green = document.getElementById('green')
+	// var red = document.getElementById('red')
+	// var black = document.getElementById('black')
+	// var myDiv = document.getElementById('myDiv')
+	// var innerCircle = document.getElementById('innerCircle')
+	// var classRequired = document.getElementById('classRequired')
+	// var imgDiv = document.getElementById('imgDiv')
+	// var btnDivMain = document.getElementById('btnDivMain')
 
+	//CREATIING IT ON CLICK EVENT
 	// green.addEventListener('click', function() {
 	// 	myDiv.style.backgroundColor = 'green';
 	// 	green.style.backgroundColor = 'green';
@@ -34,41 +187,159 @@
 	// 	black.style.color = 'white';
 	// })
 
-		// green.addEventListener('click', function() {
-		// 	document.body.innerHTML = '<h1>Hello</h1>'
-		// })
+	// green.addEventListener('click', function() {
+	// 	document.body.innerHTML = '<h1>Hello</h1>'
+	// })
 
 
-		//CREATING A SMALL TRANSITION EFFECT BASED CARD
-		// green.addEventListener('click', function() {
-		// 	myDiv.innerHTML = "<h1> Hello </h1>"
-		// 	myDiv.style.backgroundColor = 'lightgreen'
-		// 	myDiv.style.color = 'white'
-		// 	myDiv.style.fontSize = '100px'
-		// 	myDiv.style.fontFamily = 'arial'
-		// 	myDiv.style.textAlign = 'center'
-		// 	myDiv.style.transition = '2s'
-		// })
+	//CREATING A SMALL TRANSITION EFFECT BASED CARD
+	// green.addEventListener('click', function() {
+	// 	myDiv.innerHTML = "<h1> Hello </h1>"
+	// 	myDiv.style.backgroundColor = 'lightgreen'
+	// 	myDiv.style.color = 'white'
+	// 	myDiv.style.fontSize = '100px'
+	// 	myDiv.style.fontFamily = 'arial'
+	// 	myDiv.style.textAlign = 'center'
+	// 	myDiv.style.transition = '2s'
+	// })
 
-		// red.addEventListener('click', function() {
-		// 	myDiv.innerHTML = "<h1> Hello </h1>"
-		// 	myDiv.style.backgroundColor = 'red'
-		// 	myDiv.style.color = 'white'
-		// 	myDiv.style.fontSize = '100px'
-		// 	myDiv.style.fontFamily = 'arial'
-		// 	myDiv.style.textAlign = 'center'
-		// 	myDiv.style.transition = '2s'
-		// })
+	// red.addEventListener('click', function() {
+	// 	myDiv.innerHTML = "<h1> Hello </h1>"
+	// 	myDiv.style.backgroundColor = 'red'
+	// 	myDiv.style.color = 'white'
+	// 	myDiv.style.fontSize = '100px'
+	// 	myDiv.style.fontFamily = 'arial'
+	// 	myDiv.style.textAlign = 'center'
+	// 	myDiv.style.transition = '2s'
+	// })
 
-		// black.addEventListener('click', function() {
-		// 	myDiv.innerHTML = "<h1> Hello </h1>"
-		// 	myDiv.style.backgroundColor = 'black'
-		// 	myDiv.style.color = 'white'
-		// 	myDiv.style.transition = '2s'
-		// 	myDiv.style.fontSize = '100px'
-		// 	myDiv.style.fontFamily = 'arial'
-		// 	myDiv.style.textAlign = 'center'
-		// })
+	// black.addEventListener('click', function() {
+	// 	myDiv.innerHTML = "<h1> Hello </h1>"
+	// 	myDiv.style.backgroundColor = 'black'
+	// 	myDiv.style.color = 'white'
+	// 	myDiv.style.transition = '2s'
+	// 	myDiv.style.fontSize = '100px'
+	// 	myDiv.style.fontFamily = 'arial'
+	// 	myDiv.style.textAlign = 'center'
+	// })
+
+
+	// var green = document.getElementById('green')
+	// var red = document.getElementById('red')
+	// var black = document.getElementById('black')
+	// var myDiv = document.getElementById('myDiv')
+	// var innerCircle = document.getElementById('innerCircle')
+	// var classRequired = document.getElementById('classRequired')
+
+	// green.addEventListener('click', function () {
+	// 	myDiv.style.backgroundColor = '#78e08f'
+	// 	green.style.backgroundColor = '#78e08f'
+	// 	green.style.color = 'black'
+	// 	green.style.fontWeight = 'bolder'
+	// 	green.style.transition = '2s'
+	// 	innerCircle.style.fontSize = 'bolder'
+	// 	innerCircle.style.background = 'url(img.jpg)'
+	// 	innerCircle.style.backgroundSize = 'cover'
+	// 	innerCircle.style.transition = '2s'
+	// 	myDiv.style.color = 'black'
+	// 	classRequired.style.display = 'block'
+	// 	classRequired.style.transition = '2s'
+	// 	myDiv.style.transition = '2s'
+	// })
+
+	// red.addEventListener('click', function () {
+	// 	myDiv.style.backgroundColor = '#f53b57'
+	// 	innerCircle.style.background = 'url(1677046063089.jpg)'
+	// 	red.style.backgroundColor = '#f53b57'
+	// 	red.style.color = 'black'
+	// 	red.style.fontWeight = 'bolder'
+	// 	red.style.transition = '2s'
+	// 	innerCircle.style.backgroundSize = 'cover'
+	// 	innerCircle.style.transition = '2s'
+	// 	innerCircle.style.color = 'white'
+	// 	innerCircle.style.fontWeight = 'bolder'
+	// 	myDiv.style.color = 'white'
+	// 	classRequired.style.display = 'block'
+	// 	classRequired.style.transition = '2s'
+	// 	myDiv.style.transition = '2s'
+	// })
+
+	// black.addEventListener('click', function () {
+	// 	myDiv.style.backgroundColor = 'black'
+	// 	innerCircle.style.background = 'url(IMG-20240413-WA0152.jpg)'
+	// 	black.style.backgroundColor = 'black'
+	// 	black.style.color = 'white'
+	// 	black.style.fontWeight = 'bolder'
+	// 	black.style.transition = '2s'
+	// 	innerCircle.style.backgroundSize = 'cover'
+	// 	innerCircle.style.transition = '2s'
+	// 	innerCircle.style.color = 'white'
+	// 	innerCircle.style.fontWeight = 'bolder'
+	// 	myDiv.style.color = 'white'
+	// 	classRequired.style.display = 'block'
+	// 	classRequired.style.transition = '2s'
+	// 	myDiv.style.transition = '2s'
+	// })
+
+	// var green = document.getElementById('green')
+	// var red = document.getElementById('red')
+	// var black = document.getElementById('black')
+	// var myDiv = document.getElementById('myDiv')
+	// var innerCircle = document.getElementById('innerCircle')
+	// var classRequired = document.getElementById('classRequired')
+	// var imgDiv = document.getElementById('imgDiv')
+	// var btnDivMain = document.getElementById('btnDivMain')
+	// var mainDiv = document.getElementById('mainDiv')
+	// var mainContentDiv = document.getElementById('mainContentDiv')
+	// var headingDiv = document.getElementById('headingDiv')
+
+	// green.addEventListener('click', function () {
+	// 	mainDiv.style.backgroundColor = '#78e08f'
+	// 	green.style.backgroundColor = '#78e08f'
+	// 	green.style.color = 'black'
+	// 	green.style.fontWeight = 'bolder'
+	// 	green.style.transition = '2s'
+	// 	imgDiv.style.background = 'url(img.jpg) no-repeat'
+	// 	imgDiv.style.backgroundSize = '300px 350px'
+	// 	imgDiv.style.transition = '2s'
+	// 	headingDiv.style.display = 'block'
+	// 	mainContentDiv.style.display = 'block'
+	// 	btnDivMain.style.display = 'block'
+	// })
+
+	// red.addEventListener('click', function () {
+	// 	mainDiv.style.backgroundColor = '#f53b57'
+	// 	red.style.backgroundColor = '#f53b57'
+	// 	red.style.color = 'black'
+	// 	red.style.fontWeight = 'bolder'
+	// 	red.style.transition = '2s'
+	// 	imgDiv.style.background = 'url(IMG-20240413-WA0164.jpg) no-repeat'
+	// 	imgDiv.style.backgroundSize = '300px 350px'
+	// 	imgDiv.style.transition = '2s'
+	// 	mainDiv.style.width = '17rem'
+	// 	headingDiv.style.display = 'block'
+	// 	mainContentDiv.style.display = 'block'
+	// 	btnDivMain.style.display = 'block'
+	// })
+
+	// black.addEventListener('click', function () {
+	// 	mainDiv.style.backgroundColor = 'black'
+	// 	black.style.backgroundColor = 'black'
+	// 	black.style.color = 'white'
+	// 	black.style.fontWeight = 'bolder'
+	// 	black.style.transition = '2s'
+	// 	imgDiv.style.background = 'url(IMG-20240413-WA0152.jpg) no-repeat'
+	// 	imgDiv.style.backgroundSize = '279px 350px'
+	// 	imgDiv.style.transition = '2s'
+	// 	mainDiv.style.width = '17rem'
+	// 	headingDiv.style.color = 'white'
+	// 	mainContentDiv.style.color = 'white'
+	// 	headingDiv.style.display = 'block'
+	// 	mainContentDiv.style.display = 'block'
+	// 	btnDivMain.style.display = 'block'
+	// })
+
+
 </script>
 
 </html>

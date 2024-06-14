@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title></title>
 	<style>
-		.main{
+		.main {
 			width: 1000px;
 			height: 100vh;
 			margin: auto;
 			border: 1px solid black;
 		}
-		.btn_class_on{
+
+		.btn_class_on {
 			width: 200px;
 			height: 200px;
 			float: left;
 			background-color: #efeded;
 			border: 1px solid black;
 		}
-		.btn_class_off{
+
+		.btn_class_off {
 			width: 200px;
 			height: 200px;
 			float: left;
@@ -24,6 +27,7 @@
 		}
 	</style>
 </head>
+
 <body>
 	<!-- <p>
 		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -47,22 +51,30 @@
 		<div id="swt_off" class="btn_class_off" onclick="changeColor2()">OFF</div> 
 		<img src="bulb_on.jpeg" id="bulb_on">
 	</div> -->
-	<!--<form>
-		 <input type="text" value="" id="inputData" style="padding: 20px; border: 1px solid black;" placeholder="Enter item" name="" autofocus="" />
-		<input type="button" value="Add To List" id="btnClick" onclick="addList()" style="padding: 20px; font-weight: bold;">
+	<form>
+		<input type="text" value="" id="inputData" style="padding: 20px; border: 1px solid black;"
+			placeholder="Enter item" name="" autofocus="" />
+		<input type="button" value="Add To List" id="btnClick" onclick="addList()"
+			style="padding: 20px; font-weight: bold;">
 	</form>
 	<ul id="ul">
-		<li>1</li>
-		<li>2</li>
-		<li>3</li>
-		<li>4</li>
-		<li>5</li>
-		<li>6</li>
-	</ul> -->
+		<li>1 <button class="btnDelete" style="margin-left: 20px; margin-bottom: 20px;"
+				onclick="btnDelete(event)">X</button></li>
+		<li>2 <button class="btnDelete" style="margin-left: 20px; margin-bottom: 20px;"
+				onclick="btnDelete(event)">X</button></li>
+		<li>3 <button class="btnDelete" style="margin-left: 20px; margin-bottom: 20px;"
+				onclick="btnDelete(event)">X</button></li>
+		<li>4 <button class="btnDelete" style="margin-left: 20px; margin-bottom: 20px;"
+				onclick="btnDelete(event)">X</button></li>
+		<li>5 <button class="btnDelete" style="margin-left: 20px; margin-bottom: 20px;"
+				onclick="btnDelete(event)">X</button></li>
+		<li>6 <button class="btnDelete" style="margin-left: 20px; margin-bottom: 20px;"
+				onclick="btnDelete(event)">X</button></li>
+	</ul>
 
 
 	<script type="text/javascript">
-		
+
 		// one = {
 		// 	a: 10,
 		// 	b: 30
@@ -87,488 +99,497 @@
 		// 	console.log("Senior Citizen");
 		// }
 
-// 		Write a JavaScript conditional statement to sort three numbers. Display an alert box to show the results.
-// Sample numbers : 0, -1, 4
-// Output : 4, 0, -1
-
-
-// Assigning values to variables
-// var x = 0;
-// var y = -1;
-// var z = 4;
-
-// Checking the conditions to determine the order of variables
-// if (x > y && x > z) {
-// 	if (y > z) {
-// 		console.log(x + ", " + y + ", " + z);
-// 	} else {
-// 		console.log(x + ", " + z + ", " + y);
-// 	}
-// } else if (y > x && y > z) {
-// 	if (x > z) {
-// 		console.log(y + ", " + x + ", " + z);
-// 	} else {
-// 		console.log(y + ", " + z + ", " + x);
-// 	}
-// } else if (z > x && z > y) {
-// 	if (x > y) {
-// 		console.log(z + ", " + x + ", " + y);
-// 	} else {
-// 		console.log(z + ", " + y + ", " + x);
-// 	}
-// } 
-
-//  Write a JavaScript for loop that iterates from 0 to 15. For each iteration, it checks if the current number is odd or even, and displays a message on the screen.
-// Sample Output :
-// "0 is even"
-// "1 is odd"
-// "2 is even"
-// var a = parseInt(prompt("Enter the number between 0 to 15 to find out even or out: "));
-// for (a = 0; a <= 15; a++) {
-// 	if(a%2==0) {
-// 		console.log(a + " is an even number");
-// 	} else {
-// 		console.log(a + " is an odd number");
-// 	}
-// }
-
-
-
-// Write a JavaScript program that iterates integers from 1 to 100. But for multiples of three print "Fizz" instead of the number and for multiples of five print "Buzz". For numbers multiples of both three and five print "FizzBuzz".
-
-
-// for(var num_check=1; num_check<=100; num_check++) {
-// 	 if(num_check%3==0 && num_check%5==0) {
-// 		console.log("FizzBuzz");
-// 	}
-// 	else if(num_check%3==0) {
-// 		console.log(num_check + " Fizz");
-// 	}
-// 	else if(num_check%5==0) {
-// 		console.log(num_check + " Buzz");
-// 	} else {
-// 		console.log(num_check)
-// 	}
-
-// }
-
-
-
-// Write a JavaScript program to list the properties of a JavaScript object.
-// Sample object:
-// var student = {
-// 	name : "David Rayy",
-// 	sclass : "VI",
-// 	rollno : 12 };
-
-// 	var stu_data = {
-// 		name: "Pranjal",
-// 		stu_class: "VI", 
-// 		rollno: 12,
-// 		city: "Jodhpur", 
-// 		pin: "342008",
-// 		state: "rajasthan"
-// 	}
-
-// 	console.log(stu_data.name + ", " +stu_data.stu_class + ", " +stu_data.rollno);
-// 	const key_stu_data = Object.keys(stu_data);
-// 	for (var i = 0; i<key_stu_data.length; i++){
-// 		var key = key_stu_data[i];
-// 		var value = stu_data[key];
-// 		console.log(key + ": " + value);
-
-// 	}
-
-// Write a JavaScript program to display the reading status (i.e. display book name, author name and reading status) of the following books.
-
-// var library = [ 
-//    {
-//        author: 'Bill Gates',
-//        title: 'The Road Ahead',
-//        readingStatus: true
-//    },
-//    {
-//        author: 'Steve Jobs',
-//        title: 'Walter Isaacson',
-//        readingStatus: true
-//    },
-//    {
-//        author: 'Suzanne Collins',
-//        title:  'Mockingjay: The Final Book of The Hunger Games', 
-//        readingStatus: false
-//    }];
-
-// var library = [ 
-// {
-// 	title: 'Bill Gates',
-// 	author: 'The Road Ahead',
-// 	readingStatus: true
-// },
-// {
-// 	title: 'Steve Jobs',
-// 	author: 'Walter Isaacson',
-// 	readingStatus: true
-// },
-// {
-// 	title: 'Mockingjay: The Final Book of The Hunger Games',
-// 	author: 'Suzanne Collins',
-// 	readingStatus: false
-// }];
-
-// for (var i = 0; i < library.length; i++) 
-// {
-// 	var book = "'" + library[i].title + "'" + ' by ' + library[i].author + ".";
-// 	if (library[i].readingStatus) {
-// 		console.log("Already read " + book);
-// 	} else
-// 	{
-// 		console.log("You still need to read " + book);
-// 	}
-// }
-
-
-
-// PRACTICING WITH DOM
-// const take_p = document.getElementsByTagName('p');
-// console.log(take_p);
-// for(var i=0; i<take_p.length; i++) {
-// 	document.getElementById('demo').innerText += "<hr>" + take_p[i].innerText;
-// }
-
-// const paragraphs = Array.from(document.querySelectorAll('p'));
-
-    // Extract the text content of each paragraph
-    // const textContents = paragraphs.map(p => p.textContent);
-
-
-    // for(var i=0; i<paragraphs.length; i++) {
-    // 	console.log(paragraphs[i])
-
-    	// document.getElementById('demo').innerHTML = paragraphs[0].innerHTML + "<br><br>" + paragraphs[1].innerHTML;
-
-    // }
-
-    // Log the array of text content to the console
-    // console.log(textContents);
-
-    // Display the array of text content in the <div> with id="demo"
-    // 
-
-    // function changeColor() {
-    // 	var a = document.getElementById('demo');
-    // 	a.style.backgroundColor = "red";
-    // }
-
-
-    // for(var i=5; i>=1; i--) {
-    // 	console.log(i);
-    // }
-
-    // for(var i=1; i<=4; i++) {
-    // 	for(var j=1; j<=i; j++){
-    // 		document.write(j)
-    // 	}
-    // 	document.write("<br>");
-    // }
-
-
-    // FACTORIAL
-    // const num = parseInt(prompt("Enter any number: "));
-    // var fact=1;
-    // for(var i = 1; i <= num; i++){
-    // 	fact = fact*i;
-    // }
-    // console.log(fact);
-
-
-
-
-// EVEN ODD NUMBER
-    // var num = parseInt(prompt("Enter any number: "));
-    // if(num%2 == 0){
-    // 	console.log(`${num} is an even number`);
-    // } else {
-    // 	console.log(`${num} is an odd number`);
-    // }
-
-    // var i;
-    // for(i=0;i<20;i++){
-    // 	if((i%2==0)){
-    // 		console.log(i);
-    // 	}
-    // }
-
-    // for(var i = 1; i<=20; i++) {
-    // 	if(i%2==0) {
-    // 		console.log(i + " even number")
-    // 	} else{
-    // 		console.log(i + " is an odd number")
-    // 	}
-    // }
-
-
-//TABLE
-    // var num =parseInt(prompt("Enter a number"));
-    // for(var i=1;i<=10;i++){
-    // 	console.log(num + " * " + i + " = " + num*i);
-    // }
-
-
-
-   // PRIME NUMBER
-    // var num_check = parseInt(prompt("Enter the number: "));
-    // var isPrime = true;
-
-    // if(num_check==1) {
-    // 	console.log("Nor prime nor composite");
-    // } else if(num_check > 1) {
-    // 	for(var i=2; i<num_check; i++) {
-    // 		if(num_check%i==0) {
-    // 			isPrime = false;
-    // 			break;
-    // 		}
-    // 	}
-
-    // 	if(isPrime) {
-    // 		console.log(`${num_check} is a Prime number`)
-    // 	} else {
-    // 		console.log(`${num_check} is not a Prime Number`);
-    // 	}
-    // }
-
-
-
-    // PATTERNS
-    // var str;
-    // for(var i=1; i<=5; i++) {
-    // 	for(var j=3; j>=i; j--) {
-
-    // 		str+=' ';
-    // 	}
-    // 	console.log(str)
-    // 	for(var k=1; k<=i; k++) {
-    // 		str+=k;
-    // 	}
-    // 	console.log(str)
-    // }
-
-    	// IN THIS ALL THE OBJECT KEY IS BEING STORED IN VAR I AND stu_data[i] IS THE VALUE TO THE KEYS
-
-    	// const stu_data = {
-    	// 	name: "Pranjal",
-    	// 	stu_class: "VI", 
-    	// 	rollno: 12,
-    	// 	city: "Jodhpur", 
-    	// 	pin: "342008",
-    	// 	state: "rajasthan"
-    	// }
-
-    	// const {name} = stu_data;
-    	// const {pin} = stu_data;
-
-    	// console.log(name, pin)
-    	
-
-    // 	
-
-    // 	var findIndex = fruits.indexOf(take_p);
-    // 	for(var i=0; i<fruits.length; i++) {
-
-    // 		if (fruits[i]==take_p) {
-
-    // 		// const findIndex = fruits.indexOf("banana")
-    // 		console.log("Iten fround on Index Value " + findIndex)
-    // 	} else {
-    // 		console.log("Item is not listed")
-    // 	}
-    // }
-
-// MERGING THE ARRAY AND ADD THE NEW ARRAY VALUE TO IT
-// var fruits = ["apple", "banana", "orange", "grape"]
-// function addFruits() {
-// 	var fruitsMerge = [];
-// 	var take_p = prompt("Enter item: ")
-// 	fruits.push(take_p);
-// 	var merged = fruits.concat(fruitsMerge)
-// 	document.getElementById('demo').innerHTML = merged;
-// }
-
-// ENTER DASH BETWEEN EACH EVEN ARRAY VALUE
-
-	// var numCheck = prompt("Enter the string")
-	
-	// var str = numCheck.toString();
-	// var result = [str[0]];
-
-	// for(var i=1; i<str.length; i++) {
-	// 	// console.log(str[i])
-	// 	if(str[i-1]%2 == 0 && str[i]%2 == 0) {
-	// 		result.push(" - ",str[i])
-	// 	} else {
-	// 		result.push(str[i])
-	// 	}
-
-	// }
-
-	// console.log(result.join(' '))
-
-
-	// FINDING EVEN AND ODD IN FUNCTION IN AN ARRAY
-	// function firstFun() {
-	// 	let arr1 = [1,2,6,9,7,4,1,3];
-	// 	let concat1 = [];
-	// 	for(let i in arr1) {
-	// 		// console.log(arr1[i])
-	// 		if(arr1[i]%2 == 0) {
-	// 			concat1.push(arr1[i]);
-	// 		}
-	// 	}
-	// 	console.log(concat1)
-	// }
-
-	// function secondFun() {
-	// 	let arr1 = [2,6,7,19,20,21];
-	// 	let concat1 = [];
-	// 	for(let i in arr1) {
-	// 		// console.log(arr1[i])
-	// 		if(arr1[i]%2 == 1) {
-	// 			concat1.push(arr1[i]);
-	// 		}
-	// 	}
-	// 	console.log(concat1)
-	// }
-	// firstFun()
-	// secondFun()
-
-
-
-
-	// MULTIPLICATON OF TWO ARRAY AND STORING IT INTO ANOTHER ARRAY
-	// function firstFun() {
-	// 	let arr1 = [1,2,6,9,7,4];
-	// 	let arr2 = [2,6,7,19,20,21];
-	// 	let finalArr = [];
-
-	// 	for(var i=0; i<arr1.length; i++) {
-	// 		finalArr.push(arr1[i] * arr2[i])
-	// 	}
-	// 	console.log(finalArr)
-	// }
-	// firstFun()
-
-
-	// MULTIPLICATON OF TWO ARRAY WHICH IS STORED IN A ARROW FUNCTION AND RESULTING IT AN ARRAY USING PUSH METHOD
-	// var a = () => {
-	// 	var arr1 = [1,2,6,9,7,4];
-	// 	return arr1;
-	// }
-
-	// var b = () => {
-	// 	var arr2 = [2,6,7,19,20,21];
-	// 	return arr2;
-	// }
-
-	// var result = () => {
-	// 	var returnArr1 = a();
-	// 	var returnArr2 = b();
-	// 	var result = [];
-	// 	for(var i=0; i<returnArr1.length; i++) {
-	// 		result.push(returnArr1[i] * returnArr2[i])
-	// 	}
-	// 	console.log(result)
-	// }
-
-	// result()
-
-	// TURN ON AND OFF OF BULB ON CLICK
-	// var isBlue = true;
-	// var img_bulb_img = true
-	// function changeColor() {
-	// 	var demo = document.getElementById('demo');
-	// 	var img_bulb = document.getElementById('bulb_on');
-	// 	if(isBlue) {
-	// 		demo.style.backgroundColor = "red"
-	// 		demo.innerHTML="ON"
-	// 	} else {
-	// 		demo.style.backgroundColor = "green"
-	// 		demo.innerHTML="OFF"
-	// 	}
-
-
-	// 	if(img_bulb_img) {
-	// 		img_bulb.src = "bulb_off.jpeg"
-	// 	} else {
-	// 		img_bulb.src = "bulb_on.jpeg"
-	// 	}
-	// 	isBlue=!isBlue;
-	// 	img_bulb_img=!img_bulb_img;
-
-	// }
-	
-	// IN THIS PROGRAM WE ARE PUSHING THE REPEATING ARRAY VALUE TO ANOTHER ARRAY USING LOOP BEFORE USING LOOP WE ARE SORTING THE ARRAY TO MAKE IT EASY 
-	// var arr = [1,2,4,34,34,3,3,3,3,3,5,34,4,4,5,1];
-	// var empArr = [];
-	// arr.sort(function (a, b) { return a - b });
-	// for(var i=0; i<arr.length; i++) {
-	// 	if(arr[i]===arr[i+1] && empArr.indexOf(arr[i])===-1){
-	// 		empArr.push(arr[i])
-	// 	}
-	// }
-	// console.log(empArr)
-
-
-	// IN THIS PROGRAM WE ARE ADDING A NEW LI TO THE EXISTING LIST 
-	// var ul = document.getElementById('ul');
-
-	// var li = document.createElement('li')
-
-	// var createdList = ul.querySelectorAll('li')
-	// ul.appendChild(li)
-	// li.textContent = "hello"
-	// for(var i=0; i<createdList.length; i++) {
-	// 	// console.log(li[i])
-	// 	if(i%2 == 0) {
-	// 		createdList[i].style.textDecoration = 'line-through'
-
-	// 	} else {
-	// 		createdList[i].style.textDecoration = 'underline'
-	// 	}
-	// }
-
-
-	// TO DO LIST: IN THIS WE ARE GOING TO CREAT A LIST USING ONCLICK FUNCTION. IN THIS WHAT SO EVER THE USER IS ENTERING IN THE TEXTBOX, IT WILL GET ADDED INTO THE EXISTING LIST IN LI
-	// id="ul"
-	// id="btnClick"
-	// id="inputData"
-
-// 	function addList() {
-
-
-// 		var ul = document.getElementById('ul');
-
-// 		var li = document.createElement('li');
-// 		var inputData = document.getElementById('inputData');
-
-// 		ul.appendChild(li)
-// 		var createdList = ul.querySelectorAll('li')
-		
-
-// 		for(var i=0; i<createdList.length; i++) {
-// 			li.textContent = inputData.value;
-
-// 		if(i%2 == 0) {
-// 			createdList[i].style.fontWeight = 'bold'
-
-// 		} else {
-// 			createdList[i].style.fontWeight = 'normal'
-// 		}
-// 	}
-// 	if(li.textContent == inputData.value) {
-// 		inputData.value = ''
-// 	}
-// }
-
-
-</script>
+		// 		Write a JavaScript conditional statement to sort three numbers. Display an alert box to show the results.
+		// Sample numbers : 0, -1, 4
+		// Output : 4, 0, -1
+
+
+		// Assigning values to variables
+		// var x = 0;
+		// var y = -1;
+		// var z = 4;
+
+		// Checking the conditions to determine the order of variables
+		// if (x > y && x > z) {
+		// 	if (y > z) {
+		// 		console.log(x + ", " + y + ", " + z);
+		// 	} else {
+		// 		console.log(x + ", " + z + ", " + y);
+		// 	}
+		// } else if (y > x && y > z) {
+		// 	if (x > z) {
+		// 		console.log(y + ", " + x + ", " + z);
+		// 	} else {
+		// 		console.log(y + ", " + z + ", " + x);
+		// 	}
+		// } else if (z > x && z > y) {
+		// 	if (x > y) {
+		// 		console.log(z + ", " + x + ", " + y);
+		// 	} else {
+		// 		console.log(z + ", " + y + ", " + x);
+		// 	}
+		// } 
+
+		//  Write a JavaScript for loop that iterates from 0 to 15. For each iteration, it checks if the current number is odd or even, and displays a message on the screen.
+		// Sample Output :
+		// "0 is even"
+		// "1 is odd"
+		// "2 is even"
+		// var a = parseInt(prompt("Enter the number between 0 to 15 to find out even or out: "));
+		// for (a = 0; a <= 15; a++) {
+		// 	if(a%2==0) {
+		// 		console.log(a + " is an even number");
+		// 	} else {
+		// 		console.log(a + " is an odd number");
+		// 	}
+		// }
+
+
+
+		// Write a JavaScript program that iterates integers from 1 to 100. But for multiples of three print "Fizz" instead of the number and for multiples of five print "Buzz". For numbers multiples of both three and five print "FizzBuzz".
+
+
+		// for(var num_check=1; num_check<=100; num_check++) {
+		// 	 if(num_check%3==0 && num_check%5==0) {
+		// 		console.log("FizzBuzz");
+		// 	}
+		// 	else if(num_check%3==0) {
+		// 		console.log(num_check + " Fizz");
+		// 	}
+		// 	else if(num_check%5==0) {
+		// 		console.log(num_check + " Buzz");
+		// 	} else {
+		// 		console.log(num_check)
+		// 	}
+
+		// }
+
+
+
+		// Write a JavaScript program to list the properties of a JavaScript object.
+		// Sample object:
+		// var student = {
+		// 	name : "David Rayy",
+		// 	sclass : "VI",
+		// 	rollno : 12 };
+
+		// 	var stu_data = {
+		// 		name: "Pranjal",
+		// 		stu_class: "VI", 
+		// 		rollno: 12,
+		// 		city: "Jodhpur", 
+		// 		pin: "342008",
+		// 		state: "rajasthan"
+		// 	}
+
+		// 	console.log(stu_data.name + ", " +stu_data.stu_class + ", " +stu_data.rollno);
+		// 	const key_stu_data = Object.keys(stu_data);
+		// 	for (var i = 0; i<key_stu_data.length; i++){
+		// 		var key = key_stu_data[i];
+		// 		var value = stu_data[key];
+		// 		console.log(key + ": " + value);
+
+		// 	}
+
+		// Write a JavaScript program to display the reading status (i.e. display book name, author name and reading status) of the following books.
+
+		// var library = [ 
+		//    {
+		//        author: 'Bill Gates',
+		//        title: 'The Road Ahead',
+		//        readingStatus: true
+		//    },
+		//    {
+		//        author: 'Steve Jobs',
+		//        title: 'Walter Isaacson',
+		//        readingStatus: true
+		//    },
+		//    {
+		//        author: 'Suzanne Collins',
+		//        title:  'Mockingjay: The Final Book of The Hunger Games', 
+		//        readingStatus: false
+		//    }];
+
+		// var library = [ 
+		// {
+		// 	title: 'Bill Gates',
+		// 	author: 'The Road Ahead',
+		// 	readingStatus: true
+		// },
+		// {
+		// 	title: 'Steve Jobs',
+		// 	author: 'Walter Isaacson',
+		// 	readingStatus: true
+		// },
+		// {
+		// 	title: 'Mockingjay: The Final Book of The Hunger Games',
+		// 	author: 'Suzanne Collins',
+		// 	readingStatus: false
+		// }];
+
+		// for (var i = 0; i < library.length; i++) 
+		// {
+		// 	var book = "'" + library[i].title + "'" + ' by ' + library[i].author + ".";
+		// 	if (library[i].readingStatus) {
+		// 		console.log("Already read " + book);
+		// 	} else
+		// 	{
+		// 		console.log("You still need to read " + book);
+		// 	}
+		// }
+
+
+
+		// PRACTICING WITH DOM
+		// const take_p = document.getElementsByTagName('p');
+		// console.log(take_p);
+		// for(var i=0; i<take_p.length; i++) {
+		// 	document.getElementById('demo').innerText += "<hr>" + take_p[i].innerText;
+		// }
+
+		// const paragraphs = Array.from(document.querySelectorAll('p'));
+
+		// Extract the text content of each paragraph
+		// const textContents = paragraphs.map(p => p.textContent);
+
+
+		// for(var i=0; i<paragraphs.length; i++) {
+		// 	console.log(paragraphs[i])
+
+		// document.getElementById('demo').innerHTML = paragraphs[0].innerHTML + "<br><br>" + paragraphs[1].innerHTML;
+
+		// }
+
+		// Log the array of text content to the console
+		// console.log(textContents);
+
+		// Display the array of text content in the <div> with id="demo"
+		// 
+
+		// function changeColor() {
+		// 	var a = document.getElementById('demo');
+		// 	a.style.backgroundColor = "red";
+		// }
+
+
+		// for(var i=5; i>=1; i--) {
+		// 	console.log(i);
+		// }
+
+		// for(var i=1; i<=4; i++) {
+		// 	for(var j=1; j<=i; j++){
+		// 		document.write(j)
+		// 	}
+		// 	document.write("<br>");
+		// }
+
+
+		// FACTORIAL
+		// const num = parseInt(prompt("Enter any number: "));
+		// var fact=1;
+		// for(var i = 1; i <= num; i++){
+		// 	fact = fact*i;
+		// }
+		// console.log(fact);
+
+
+
+
+		// EVEN ODD NUMBER
+		// var num = parseInt(prompt("Enter any number: "));
+		// if(num%2 == 0){
+		// 	console.log(`${num} is an even number`);
+		// } else {
+		// 	console.log(`${num} is an odd number`);
+		// }
+
+		// var i;
+		// for(i=0;i<20;i++){
+		// 	if((i%2==0)){
+		// 		console.log(i);
+		// 	}
+		// }
+
+		// for(var i = 1; i<=20; i++) {
+		// 	if(i%2==0) {
+		// 		console.log(i + " even number")
+		// 	} else{
+		// 		console.log(i + " is an odd number")
+		// 	}
+		// }
+
+
+		//TABLE
+		// var num =parseInt(prompt("Enter a number"));
+		// for(var i=1;i<=10;i++){
+		// 	console.log(num + " * " + i + " = " + num*i);
+		// }
+
+
+
+		// PRIME NUMBER
+		// var num_check = parseInt(prompt("Enter the number: "));
+		// var isPrime = true;
+
+		// if(num_check==1) {
+		// 	console.log("Nor prime nor composite");
+		// } else if(num_check > 1) {
+		// 	for(var i=2; i<num_check; i++) {
+		// 		if(num_check%i==0) {
+		// 			isPrime = false;
+		// 			break;
+		// 		}
+		// 	}
+
+		// 	if(isPrime) {
+		// 		console.log(`${num_check} is a Prime number`)
+		// 	} else {
+		// 		console.log(`${num_check} is not a Prime Number`);
+		// 	}
+		// }
+
+
+
+		// PATTERNS
+		// var str;
+		// for(var i=1; i<=5; i++) {
+		// 	for(var j=3; j>=i; j--) {
+
+		// 		str+=' ';
+		// 	}
+		// 	console.log(str)
+		// 	for(var k=1; k<=i; k++) {
+		// 		str+=k;
+		// 	}
+		// 	console.log(str)
+		// }
+
+		// IN THIS ALL THE OBJECT KEY IS BEING STORED IN VAR I AND stu_data[i] IS THE VALUE TO THE KEYS
+
+		// const stu_data = {
+		// 	name: "Pranjal",
+		// 	stu_class: "VI", 
+		// 	rollno: 12,
+		// 	city: "Jodhpur", 
+		// 	pin: "342008",
+		// 	state: "rajasthan"
+		// }
+
+		// const {name} = stu_data;
+		// const {pin} = stu_data;
+
+		// console.log(name, pin)
+
+
+		// 	
+
+		// 	var findIndex = fruits.indexOf(take_p);
+		// 	for(var i=0; i<fruits.length; i++) {
+
+		// 		if (fruits[i]==take_p) {
+
+		// 		// const findIndex = fruits.indexOf("banana")
+		// 		console.log("Iten fround on Index Value " + findIndex)
+		// 	} else {
+		// 		console.log("Item is not listed")
+		// 	}
+		// }
+
+		// MERGING THE ARRAY AND ADD THE NEW ARRAY VALUE TO IT
+		// var fruits = ["apple", "banana", "orange", "grape"]
+		// function addFruits() {
+		// 	var fruitsMerge = [];
+		// 	var take_p = prompt("Enter item: ")
+		// 	fruits.push(take_p);
+		// 	var merged = fruits.concat(fruitsMerge)
+		// 	document.getElementById('demo').innerHTML = merged;
+		// }
+
+		// ENTER DASH BETWEEN EACH EVEN ARRAY VALUE
+
+		// var numCheck = prompt("Enter the string")
+
+		// var str = numCheck.toString();
+		// var result = [str[0]];
+
+		// for(var i=1; i<str.length; i++) {
+		// 	// console.log(str[i])
+		// 	if(str[i-1]%2 == 0 && str[i]%2 == 0) {
+		// 		result.push(" - ",str[i])
+		// 	} else {
+		// 		result.push(str[i])
+		// 	}
+
+		// }
+
+		// console.log(result.join(' '))
+
+
+		// FINDING EVEN AND ODD IN FUNCTION IN AN ARRAY
+		// function firstFun() {
+		// 	let arr1 = [1,2,6,9,7,4,1,3];
+		// 	let concat1 = [];
+		// 	for(let i in arr1) {
+		// 		// console.log(arr1[i])
+		// 		if(arr1[i]%2 == 0) {
+		// 			concat1.push(arr1[i]);
+		// 		}
+		// 	}
+		// 	console.log(concat1)
+		// }
+
+		// function secondFun() {
+		// 	let arr1 = [2,6,7,19,20,21];
+		// 	let concat1 = [];
+		// 	for(let i in arr1) {
+		// 		// console.log(arr1[i])
+		// 		if(arr1[i]%2 == 1) {
+		// 			concat1.push(arr1[i]);
+		// 		}
+		// 	}
+		// 	console.log(concat1)
+		// }
+		// firstFun()
+		// secondFun()
+
+
+
+
+		// MULTIPLICATON OF TWO ARRAY AND STORING IT INTO ANOTHER ARRAY
+		// function firstFun() {
+		// 	let arr1 = [1,2,6,9,7,4];
+		// 	let arr2 = [2,6,7,19,20,21];
+		// 	let finalArr = [];
+
+		// 	for(var i=0; i<arr1.length; i++) {
+		// 		finalArr.push(arr1[i] * arr2[i])
+		// 	}
+		// 	console.log(finalArr)
+		// }
+		// firstFun()
+
+
+		// MULTIPLICATON OF TWO ARRAY WHICH IS STORED IN A ARROW FUNCTION AND RESULTING IT AN ARRAY USING PUSH METHOD
+		// var a = () => {
+		// 	var arr1 = [1,2,6,9,7,4];
+		// 	return arr1;
+		// }
+
+		// var b = () => {
+		// 	var arr2 = [2,6,7,19,20,21];
+		// 	return arr2;
+		// }
+
+		// var result = () => {
+		// 	var returnArr1 = a();
+		// 	var returnArr2 = b();
+		// 	var result = [];
+		// 	for(var i=0; i<returnArr1.length; i++) {
+		// 		result.push(returnArr1[i] * returnArr2[i])
+		// 	}
+		// 	console.log(result)
+		// }
+
+		// result()
+
+		// TURN ON AND OFF OF BULB ON CLICK
+		// var isBlue = true;
+		// var img_bulb_img = true
+		// function changeColor() {
+		// 	var demo = document.getElementById('demo');
+		// 	var img_bulb = document.getElementById('bulb_on');
+		// 	if(isBlue) {
+		// 		demo.style.backgroundColor = "red"
+		// 		demo.innerHTML="ON"
+		// 	} else {
+		// 		demo.style.backgroundColor = "green"
+		// 		demo.innerHTML="OFF"
+		// 	}
+
+
+		// 	if(img_bulb_img) {
+		// 		img_bulb.src = "bulb_off.jpeg"
+		// 	} else {
+		// 		img_bulb.src = "bulb_on.jpeg"
+		// 	}
+		// 	isBlue=!isBlue;
+		// 	img_bulb_img=!img_bulb_img;
+
+		// }
+
+		// IN THIS PROGRAM WE ARE PUSHING THE REPEATING ARRAY VALUE TO ANOTHER ARRAY USING LOOP BEFORE USING LOOP WE ARE SORTING THE ARRAY TO MAKE IT EASY 
+		// var arr = [1,2,4,34,34,3,3,3,3,3,5,34,4,4,5,1];
+		// var empArr = [];
+		// arr.sort(function (a, b) { return a - b });
+		// for(var i=0; i<arr.length; i++) {
+		// 	if(arr[i]===arr[i+1] && empArr.indexOf(arr[i])===-1){
+		// 		empArr.push(arr[i])
+		// 	}
+		// }
+		// console.log(empArr)
+
+
+		// IN THIS PROGRAM WE ARE ADDING A NEW LI TO THE EXISTING LIST 
+		// var ul = document.getElementById('ul');
+
+		// var li = document.createElement('li')
+
+		// var createdList = ul.querySelectorAll('li')
+		// ul.appendChild(li)
+		// li.textContent = "hello"
+		// for(var i=0; i<createdList.length; i++) {
+		// 	// console.log(li[i])
+		// 	if(i%2 == 0) {
+		// 		createdList[i].style.textDecoration = 'line-through'
+
+		// 	} else {
+		// 		createdList[i].style.textDecoration = 'underline'
+		// 	}
+		// }
+
+
+		// TO DO LIST: IN THIS WE ARE GOING TO CREAT A LIST USING ONCLICK FUNCTION. IN THIS WHAT SO EVER THE USER IS ENTERING IN THE TEXTBOX, IT WILL GET ADDED INTO THE EXISTING LIST IN LI
+		// id="ul"
+		// id="btnClick"
+		// id="inputData"
+
+
+		var ul = document.getElementById('ul');
+
+		var li = document.createElement('li');
+		var inputData = document.getElementById('inputData');
+
+		ul.appendChild(li)
+		var createdList = ul.querySelectorAll('li')
+
+
+		function addList() {
+			for (var i = 0; i < createdList.length; i++) {
+				li.innerHTML = inputData.value + '<button class="btnDelete" style="margin-left: 20px; margin-bottom: 20px;" onclick="btnDelete()">X</button>'
+				console.log(createdList[i])
+
+				if (i % 2 == 0) {
+					createdList[i].style.fontWeight = 'bold'
+
+				} else {
+					createdList[i].style.fontWeight = 'normal'
+				}
+			}
+			if (li.textContent == inputData.value) {
+				inputData.value = ''
+			}
+		}
+
+		function btnDelete(event) {
+			if (event.target.classList.contains('btnDelete')) {
+				const li = event.target.parentElement
+				ul.removeChild(li)
+			}
+
+		}
+
+
+	</script>
 </body>
+
 </html>

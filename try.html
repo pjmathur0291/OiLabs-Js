@@ -1,68 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Buttons</title>
 </head>
+
 <body>
-    <button id="btn1">Product 1</button>
-    <button id="btn2">Product 2</button>
-    <button id="btn3">Product 3</button>
-    <div id="productDetails"></div>
+    <div class="product-card">
+        <img src="product-image.jpg" alt="Product Image">
+        <h2>Product Name</h2>
+        <p class="product-details-link">More Details</p>
+    </div>
+
+
 
     <script>
-        // Array of product data
-        const products = [
-            {
-                productId: 1,
-                productName: "Single Bed",
-                ratings: "3",
-                inStock: 5,
-                description: "A comfortable single bed."
+        const productDetails = {
+            // Replace with your actual product details objects
+            product1: {
+                name: "Product 1",
+                description: "This is a detailed description of Product 1.",
+                price: "$19.99",
             },
-            {
-                productId: 2,
-                productName: "Double Bed",
-                ratings: "3",
-                inStock: 4,
-                description: "A spacious double bed."
-            },
-            {
-                productId: 3,
-                productName: "Queen Size Bed",
-                ratings: "3",
-                inStock: 5,
-                description: "A luxurious queen size bed."
+            product2: {
+                name: "Product 2",
+                description: "...",
+                price: "...",
             }
-        ];
+            // ... add more products as needed
+        };
 
-        // Function to display product details
-        function displayProductDetails(productId) {
-            const product = products.find(p => p.productId === productId);
-            if (product) {
-                const details = `
-                    <h2>${product.productName}</h2>
-                    <p>Ratings: ${product.ratings}</p>
-                    <p>In Stock: ${product.inStock}</p>
-                    <p>Description: ${product.description}</p>
-                `;
-                document.getElementById('productDetails').innerHTML = details;
-            } else {
-                document.getElementById('productDetails').innerHTML = '<p>Product not found</p>';
-            }
-        }
+        const productCards = document.querySelectorAll(".product-card");
 
-        // Attach event listeners to buttons
-        document.getElementById('btn1').addEventListener('click', function() {
-            displayProductDetails(1);
+        productCards.forEach((productCard) => {
+            const detailsLink = productCard.querySelector(".product-details-link");
+
+            detailsLink.addEventListener("click", () => {
+                // Get product ID (assuming each product card has a unique identifier)
+                const productId = productCard.dataset.productId; // Assuming you have `data-productId` attribute set
+
+                if (productId && productDetails[productId]) {
+                    const product = productDetails[productId];
+
+                    // Display product details (replace with your desired presentation method)
+                    console.log("Product Name:", product.name);
+                    console.log("Description:", product.description);
+                    console.log("Price:", product.price);
+
+                    // You can also create a modal, popup, or update the product card itself to display details
+                } else {
+                    console.error("Product details not found for ID:");
+                }
+            });
         });
-        document.getElementById('btn2').addEventListener('click', function() {
-            displayProductDetails(2);
-        });
-        document.getElementById('btn3').addEventListener('click', function() {
-            displayProductDetails(3);
-        });
+
     </script>
 </body>
+
 </html>

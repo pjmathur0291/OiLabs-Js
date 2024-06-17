@@ -51,25 +51,39 @@
 		<div id="swt_off" class="btn_class_off" onclick="changeColor2()">OFF</div> 
 		<img src="bulb_on.jpeg" id="bulb_on">
 	</div> -->
+
+	<!-- TO-DO LIST PROGRAM -->
 	<form>
 		<input type="text" value="" id="inputData" style="padding: 20px; border: 1px solid black;"
-			placeholder="Enter item" name="" autofocus="" />
+			placeholder="Enter item" name="" autofocus="true" />
 		<input type="button" value="Add To List" id="btnClick" onclick="addList()"
 			style="padding: 20px; font-weight: bold;">
 	</form>
 	<ul id="ul">
 		<li>1 <button class="btnDelete" style="margin-left: 20px; margin-bottom: 20px;"
-				onclick="btnDelete(event)">X</button></li>
+				onclick="btnDelete(event)">X</button>
+			<button class="btnEdit" style="margin-left: 20px; margin-bottom: 20px;" onclick="btnEdit()">Edit</button>
+		</li>
 		<li>2 <button class="btnDelete" style="margin-left: 20px; margin-bottom: 20px;"
-				onclick="btnDelete(event)">X</button></li>
+				onclick="btnDelete(event)">X</button>
+			<button class="btnEdit" style="margin-left: 20px; margin-bottom: 20px;" onclick="btnEdit()">Edit</button>
+		</li>
 		<li>3 <button class="btnDelete" style="margin-left: 20px; margin-bottom: 20px;"
-				onclick="btnDelete(event)">X</button></li>
+				onclick="btnDelete(event)">X</button>
+			<button class="btnEdit" style="margin-left: 20px; margin-bottom: 20px;" onclick="btnEdit()">Edit</button>
+		</li>
 		<li>4 <button class="btnDelete" style="margin-left: 20px; margin-bottom: 20px;"
-				onclick="btnDelete(event)">X</button></li>
+				onclick="btnDelete(event)">X</button>
+			<button class="btnEdit" style="margin-left: 20px; margin-bottom: 20px;" onclick="btnEdit()">Edit</button>
+		</li>
 		<li>5 <button class="btnDelete" style="margin-left: 20px; margin-bottom: 20px;"
-				onclick="btnDelete(event)">X</button></li>
+				onclick="btnDelete(event)">X</button>
+			<button class="btnEdit" style="margin-left: 20px; margin-bottom: 20px;" onclick="btnEdit()">Edit</button>
+		</li>
 		<li>6 <button class="btnDelete" style="margin-left: 20px; margin-bottom: 20px;"
-				onclick="btnDelete(event)">X</button></li>
+				onclick="btnDelete(event)">X</button>
+			<button class="btnEdit" style="margin-left: 20px; margin-bottom: 20px;" onclick="btnEdit()">Edit</button>
+		</li>
 	</ul>
 
 
@@ -529,66 +543,63 @@
 		// console.log(empArr)
 
 
-		// IN THIS PROGRAM WE ARE ADDING A NEW LI TO THE EXISTING LIST 
-		// var ul = document.getElementById('ul');
-
-		// var li = document.createElement('li')
-
-		// var createdList = ul.querySelectorAll('li')
-		// ul.appendChild(li)
-		// li.textContent = "hello"
-		// for(var i=0; i<createdList.length; i++) {
-		// 	// console.log(li[i])
-		// 	if(i%2 == 0) {
-		// 		createdList[i].style.textDecoration = 'line-through'
-
-		// 	} else {
-		// 		createdList[i].style.textDecoration = 'underline'
-		// 	}
-		// }
-
-
 		// TO DO LIST: IN THIS WE ARE GOING TO CREAT A LIST USING ONCLICK FUNCTION. IN THIS WHAT SO EVER THE USER IS ENTERING IN THE TEXTBOX, IT WILL GET ADDED INTO THE EXISTING LIST IN LI
 		// id="ul"
 		// id="btnClick"
 		// id="inputData"
 
 
-		var ul = document.getElementById('ul');
 
-		var li = document.createElement('li');
-		var inputData = document.getElementById('inputData');
+		// var inputData = document.getElementById('inputData');
+		// var ull = document.getElementsByClassName('ul')
+		// function addList(event) {
+		// 	event.preventDefault();
+		// 	tv = inputData.value
+		// 	var newli = document.createElement('li');
+		// 	var li = document.querySelector('li')
+		// 	li += newli.innerHTML = tv 
 
-		ul.appendChild(li)
-		var createdList = ul.querySelectorAll('li')
 
+
+
+		// if (i % 2 == 0) {
+		// 	createdList[i].style.fontWeight = 'bold'
+
+		// } else {
+		// 	createdList[i].style.fontWeight = 'normal'
+		// }
+
+		// if (li.textContent == inputData.value) {
+		// 	inputData.value = ''
+		// }
+		// }
+
+		// function btnDelete(event) {
+		// 	if (event.target.classList.contains('btnDelete')) {
+		// 		const li = event.target.parentElement
+		// 		ul.removeChild(li)
+		// 	}
+
+		// }
+
+
+		var inputData = document.getElementById('inputData')
+		var ul = document.getElementById('ul')
 
 		function addList() {
-			for (var i = 0; i < createdList.length; i++) {
-				li.innerHTML = inputData.value + '<button class="btnDelete" style="margin-left: 20px; margin-bottom: 20px;" onclick="btnDelete()">X</button>'
-				console.log(createdList[i])
 
-				if (i % 2 == 0) {
-					createdList[i].style.fontWeight = 'bold'
-
-				} else {
-					createdList[i].style.fontWeight = 'normal'
-				}
-			}
-			if (li.textContent == inputData.value) {
-				inputData.value = ''
-			}
+			var li = document.createElement('li')
+			li.innerHTML = inputData.value + ' <button class="btnDelete" style="margin-left: 20px; margin-bottom: 20px;" onclick="btnDelete()">X</button> <button class="btnEdit" style="margin-left: 20px; margin-bottom: 20px;" onclick="btnDEdit()">Edit</button>'
+			ul.appendChild(li)
+			inputData.value = '';
 		}
 
-		function btnDelete(event) {
+		function btnDelete() {
 			if (event.target.classList.contains('btnDelete')) {
-				const li = event.target.parentElement
+				var li = event.target.parentElement
 				ul.removeChild(li)
 			}
-
 		}
-
-
 	</script>
 </body>
 

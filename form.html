@@ -549,57 +549,25 @@
 		// id="inputData"
 
 
+		// var inputData = document.getElementById('inputData')
+		// var ul = document.getElementById('ul')
 
-		// var inputData = document.getElementById('inputData');
-		// var ull = document.getElementsByClassName('ul')
-		// function addList(event) {
-		// 	event.preventDefault();
-		// 	tv = inputData.value
-		// 	var newli = document.createElement('li');
-		// 	var li = document.querySelector('li')
-		// 	li += newli.innerHTML = tv 
+		// function addList() {
 
-
-
-
-		// if (i % 2 == 0) {
-		// 	createdList[i].style.fontWeight = 'bold'
-
-		// } else {
-		// 	createdList[i].style.fontWeight = 'normal'
+		// 	var li = document.createElement('li')
+		// 	li.innerHTML = inputData.value + ' <button class="btnDelete" style="margin-left: 20px; margin-bottom: 20px;" onclick="btnDelete()">X</button> <button class="btnEdit" style="margin-left: 20px; margin-bottom: 20px;" onclick="btnDEdit()">Edit</button>'
+		// 	ul.appendChild(li)
+		// 	inputData.value = '';
 		// }
 
-		// if (li.textContent == inputData.value) {
-		// 	inputData.value = ''
-		// }
-		// }
-
-		// function btnDelete(event) {
+		// function btnDelete() {
 		// 	if (event.target.classList.contains('btnDelete')) {
-		// 		const li = event.target.parentElement
+		// 		var li = event.target.parentElement
 		// 		ul.removeChild(li)
 		// 	}
-
 		// }
 
 
-		var inputData = document.getElementById('inputData')
-		var ul = document.getElementById('ul')
-
-		function addList() {
-
-			var li = document.createElement('li')
-			li.innerHTML = inputData.value + ' <button class="btnDelete" style="margin-left: 20px; margin-bottom: 20px;" onclick="btnDelete()">X</button> <button class="btnEdit" style="margin-left: 20px; margin-bottom: 20px;" onclick="btnDEdit()">Edit</button>'
-			ul.appendChild(li)
-			inputData.value = '';
-		}
-
-		function btnDelete() {
-			if (event.target.classList.contains('btnDelete')) {
-				var li = event.target.parentElement
-				ul.removeChild(li)
-			}
-		}
 	</script>
 </body>
 

@@ -4,6 +4,10 @@
 <head>
     <title>Fetch API Example</title>
     <style>
+        body {
+            font-family: arial !important;
+        }
+
         p {
             font-size: 28px;
             font-family: arial;
@@ -12,7 +16,13 @@
 </head>
 
 <body>
-    <div id="data"></div>
+    <h1>Weather App</h1>
+    <form id="weatherForm">
+        <input type="text" id="city" placeholder="Enter city name">
+        <button type="submit">Get Weather</button>
+    </form>
+    <div id="weatherData"></div>
+
     <script>
         // URL of the API
         // const apiUrl = 'https://fonts.googleapis.com/css2?family=Playwrite+NZ:wght@100..400&display=swap';
@@ -37,28 +47,39 @@
         // fetchData();
 
 
-        const apiURL = 'https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid=5a05c1b6e78c6d0b257c311f2052295b'
+        document.getElementById('weatherForm').addEventListener('submit', fetchWeather);
 
-        async function fetchData() {
+        async function fetchWeather(event) {
+            event.preventDefault();
+            const city = document.getElementById('city').value;
+            const apiKey = '5a05c1b6e78c6d0b257c311f2052295b'; // Replace with your OpenWeatherMap API key
+            const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
             try {
-                const response = await fetch(apiURL)
+                const response = await fetch(apiUrl);
                 if (!response.ok) {
-                    throw new Error('Network Error')
+                    throw new Error('Network response was not ok ' + response.statusText);
                 }
-                const data = await response.JSON();
-                console.log(data);
-
-                const dataDiv = document.getElementById('data')
-                const p = document.createElement('p')
-                p.textContent = `Title: ${data.main}`
-                dataDiv.appendChild(p)
-            }
-            catch(error) {
-                console.error("Fetching Error");
+                const data = await response.json();
+                displayWeather(data);
+            } catch (error) {
+                console.error('There was a problem with the fetch operation:', error);
             }
         }
 
-        fetchData()
+        function displayWeather(data) {
+            const weatherDataDiv = document.getElementById('weatherData');
+            weatherDataDiv.innerHTML = `
+        <h2>Weather in ${data.name}</h2>
+        <p>Temperature: ${data.main.temp}°C</p>
+        <p>Weather: ${data.weather[0].description}</p>
+        <p>Humidity: ${data.main.humidity}%</p>
+        <p>Wind Speed: ${data.wind.speed} m/s</p>
+    `;
+        }
+
+
+        fetchWeather(event);
     </script>
 </body>
 

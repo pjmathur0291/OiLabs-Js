@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Fetch API Example</title>
+    <style>
+        p {
+            font-size: 28px;
+            font-family: arial;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="data"></div>
+    <script>
+        // URL of the API
+        // const apiUrl = 'https://fonts.googleapis.com/css2?family=Playwrite+NZ:wght@100..400&display=swap';
+        // async function fetchData() {
+        //     try {
+        //         const response = await fetch(apiUrl);
+        //         if (!response.ok) {
+        //             throw new Error('Network response was not ok ' + response.statusText);
+        //         }
+        //         const data = await response.json();
+        //         console.log(data);
+
+        //         const dataDiv = document.getElementById('data');
+        //         const p = document.createElement('p');
+        //         p.textContent = `Title: ${data.id}`;
+        //         dataDiv.appendChild(p);
+        //     } catch (error) {
+        //         console.error('There was a problem with the fetch operation:', error);
+        //     }
+        // }
+
+        // fetchData();
+
+
+        const apiURL = 'https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid=5a05c1b6e78c6d0b257c311f2052295b'
+
+        async function fetchData() {
+            try {
+                const response = await fetch(apiURL)
+                if (!response.ok) {
+                    throw new Error('Network Error')
+                }
+                const data = await response.JSON();
+                console.log(data);
+
+                const dataDiv = document.getElementById('data')
+                const p = document.createElement('p')
+                p.textContent = `Title: ${data.main}`
+                dataDiv.appendChild(p)
+            }
+            catch(error) {
+                console.error("Fetching Error");
+            }
+        }
+
+        fetchData()
+    </script>
+</body>
+
+</html>

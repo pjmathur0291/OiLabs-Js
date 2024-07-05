@@ -1,7 +1,6 @@
 import React from "react"
 import './App.css'
 import { Link } from 'react-router-dom'
-import logo from './assets/logo_prev_ui.png'
 import Navbar from "./Navbar"
 import Footer from "./Footer"
 const Login = () => {
@@ -18,7 +17,8 @@ const Login = () => {
             <form action="#" method="post">
               <input type="text" name="userName" className="formPost" placeholder="Username" required />
               <input type="password" name="password" className="formPost" placeholder="Password" required />
-              <Link to={'/'}><button className="loginButton">Login</button></Link>
+              <Link to={'/Display'}><button className="loginButton">Login</button></Link>
+              <div className="signUp">Click here for <Link to={'/Signup'}><span>Signup</span></Link></div>
             </form>
           </div>
         </div>

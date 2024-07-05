@@ -4,10 +4,12 @@
   box-sizing: border-box;
   font-family: "Playwrite US Trad", cursive;
 }
-a{
+
+a {
   color: inherit !important;
   text-decoration: none !important;
 }
+
 .clear {
   clear: both;
 }
@@ -135,15 +137,25 @@ a{
 
 .loginBox {
   width: 60vh;
-  height: 40vh;
+  /* height: 40vh; */
   /* display: block; */
   border: 1px solid white;
   border-radius: 5%;
   margin: auto;
   margin-top: 2vh;
+  padding-bottom: 10px;
+}
+.signUp{
+  text-align: center;
+  color: white;
+}
+.signUp span{
+  font-weight: bolder;
 }
 
-
+.extra{
+  background-color: black !important;
+}
 
 
 
@@ -159,7 +171,8 @@ a{
   border-bottom: 2px solid white;
   margin: auto;
 }
-.formPost:focus{
+
+.formPost:focus {
   border: none;
   outline: none;
 }
@@ -181,6 +194,7 @@ a{
   font-size: 22px;
   font-family: "Playwrite US Trad", cursive;
 }
+
 .loginButton:hover {
   background-color: white;
   transition: 1s;
@@ -189,23 +203,29 @@ a{
 }
 
 
-footer{
+footer {
   width: 100%;
   height: auto;
   display: flex;
   background: black;
   color: white;
 }
-leftSection, middleSection, extraSection, rightSection{
+
+leftSection,
+middleSection,
+extraSection,
+rightSection {
   width: 25%;
   border: 1px solid black !important;
 }
+
 leftSection {
   /* border: 2px solid red !important; */
   margin-top: 20px;
   margin-bottom: 20px;
 }
-leftSection img{
+
+leftSection img {
   width: 100px;
   height: 50px;
   /* margin-left: 120px;
@@ -213,52 +233,185 @@ leftSection img{
   margin-top: 10px;
   padding-left: 10px;
 }
-.footerLogoName{
+
+.footerLogoName {
   position: relative;
   bottom: 12px;
   font-size: 25px;
   right: 20px;
 }
-leftSection p{
+
+leftSection p {
   text-align: justify !important;
   padding-left: 10px;
 }
 
-middleSection h4{
+middleSection h4 {
   text-align: center;
   padding-top: 30px;
   text-decoration: underline;
 }
-middleSection ul{
+
+middleSection ul {
   list-style-type: none;
 }
+
 middleSection li {
   text-align: center;
   padding-top: 25px;
 }
-middleSection li:hover{
+
+middleSection li:hover {
   text-decoration: underline;
 }
-extraSection h4{
+
+extraSection h4 {
   text-align: center;
   padding-top: 30px;
   text-decoration: underline;
 }
-.mainCenterContent{
+
+.mainCenterContent {
   font-weight: bolder;
 }
-rightSection h4{
+
+rightSection h4 {
   text-align: center;
   padding-top: 30px;
   text-decoration: underline;
 }
-rightSection > p{
-  padding-top: 24px;
-}
-extraSection > p {
+
+rightSection>p {
   padding-top: 24px;
 }
 
-.mainCenterContent{
+extraSection>p {
+  padding-top: 24px;
+}
+
+.mainCenterContent {
   font-weight: bolder;
+}
+
+.formPostMusic option {
+  color: white;
+  background-color: rgb(0, 0, 0) !important;
+  text-align: left;
+}
+
+.formPost::placeholder {
+  /* text-align: right; */
+  transform: translateX(-250px) translateY(-8px);
+  color: rgb(193, 181, 181);
+  font-size: 16px;
+}
+
+.aristDiv {
+  width: 1240px;
+  height: auto;
+  /* border: 1px solid red; */
+  margin: auto;
+  display: flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* justify-content: center; */
+  margin-top: 20px;
+  margin-bottom: 30px;
+  gap: 10px;
+}
+
+.aristDivBox {
+  width: 315px;
+  height: 500px;
+  /* border: 1px solid red; */
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.editImage {
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  margin-left: 10px;
+  flex: 1 1 calc(15% - 0);
+  margin: 10px;
+  box-sizing: border-box;
+
+}
+
+.aristDivBoxImg {
+  text-align: center !important;
+  margin-left: 55px;
+  margin-top: 80px;
+}
+
+.artistName {
+  color: white;
+  text-align: center;
+  /* margin-top: 12vh; */
+}
+
+.readMoreBTN {
+  background: black;
+  color: white;
+  margin-top: 21vh;
+  margin-left: 8vh;
+  border: none;
+  font-size: 22px;
+  font-family: "Playwrite US Trad", cursive;
+}
+
+.readMore {
+  width: 100%;
+  height: auto;
+}
+.readMore .readMoreBTN:hover {
+  color: black;
+  background-color: white;
+  transition: 1s;
+  cursor: pointer;
+}
+
+
+.moreInfoMainDiv{
+  width: 100%;
+  height: auto;
+  background-color: black;
+  color: white;
+}
+.mainCenter{
+  width: 1260px;
+  height: auto;
+  margin: auto;
+  /* border: 1px solid red; */
+}
+.moreInfoArtistBlock{
+  /* flex: 0 !important; */
+  background-position: center right !important;
+  margin: auto;
+  /* padding-top: 30px; */
+  /* padding-bottom: 30px; */
+}
+.moreInfoArtistBlockCopy{
+  width: 100%;
+  height: inherit;
+  background-color: rgba(0,0,0,0.5);
+  /* padding-top: 30px !important; */
+  padding-bottom: 30px;
+}
+.artistInfo{
+  margin-top: 50px;
+}
+.artistInfo span{
+  font-size: 20px;
+}
+.indiArtistName{
+  font-weight: lighter;
+  text-transform: capitalize !important;
+}
+.aboutArtist{
+  padding-top: 10px;
+}
+.indiPlayBTN{
+  margin-left: 45%;
 }

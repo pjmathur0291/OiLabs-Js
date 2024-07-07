@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 import logoArtist from './assets/images_prev_ui.png'
 import Footer from "./Footer";
 
-import './App.css'
+
 
 
 const Moreinfo = ({ artist }) => {
@@ -24,19 +24,11 @@ const Moreinfo = ({ artist }) => {
 
     const { id } = useParams()
     const matchid = artist.find((i) => i.id == id)
-    console.log(matchid);
+    // console.log(matchid);
     return (
         <div>
             <Navbar />
             <div key={matchid.id}>
-                {/* <h1>{matchid.Name}</h1>
-                <button onClick={handlePlayPause}>
-                    {isPlaying ? 'Pause' : 'Play'}
-                </button>
-                {matchid.song && (
-                    <audio ref={audioRef} src={matchid.song} />
-                )} */}
-
                 <div className='moreInfoMainDiv'>
                     <div className='mainCenter'>
                         <div className="aristDivBox editImage moreInfoArtistBlock" style={{ background: `url(${matchid.image})` }}>

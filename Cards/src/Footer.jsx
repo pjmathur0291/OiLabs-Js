@@ -1,7 +1,6 @@
 import React from "react"
 import './App.css'
 import { Link } from 'react-router-dom'
-import Navbar from "./Navbar"
 import footerLogo from './assets/logo_prev_ui.png'
 const Footer = () => {
     return (
@@ -19,7 +18,7 @@ const Footer = () => {
                     <h4>More</h4>
                     <ul>
                         <Link to={'/'}><li>Home</li></Link>
-                        <Link to={'/'}><li>About</li></Link>
+                        <Link to={'/About'}><li>About</li></Link>
                         <Link to={'/'}><li>Gallery</li></Link>
                         <Link to={'/Login'}><li>Login</li></Link>
                     </ul>
@@ -36,6 +35,7 @@ const Footer = () => {
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium molestiae repudiandae beatae quis ducimus.<u className="mainCenterContent">Lorem ipsum</u> dolor sit amet consectetur adipisicing elit. Laudantium molestiae repudiandae beatae quis ducimus.
                     </p>
                 </rightSection>
+                <div className="clear"></div>
             </footer>
         </>
     )

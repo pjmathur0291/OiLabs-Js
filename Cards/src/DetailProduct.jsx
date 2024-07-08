@@ -34,7 +34,7 @@ const DetailProduct = ({ productDetail }) => {
                 <div className='displayDetailRight'>
                     <div className='displayProductName'>
                         <h2>{findId.productName}</h2> <hr />
-                        <h3>{findId.Company}</h3>
+                        <h3><b>Company: </b>{findId.Company}</h3>
                         <div className='productPricing'>
                             <span className='pricingHeading'>Previous Price:</span>
                             <span> ₹</span>

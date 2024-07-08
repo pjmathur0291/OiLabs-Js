@@ -10,9 +10,11 @@ import Moreinfo from './Moreinfo'
 import ImageSlider from './ImageSlider'
 import About from './About'
 import DetailProduct from './DetailProduct'
+import AllProducts from './AllProducts'
+import Accessories from './Accessories'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
-function App({ id, Name, categories, image, song, productId, productName, productImage, productDetails, Compnay, price, previousPrice }) {
+function App({ id, Name, categories, image, song, productId, productName, productImage, productDetails, Compnay, price, previousPrice, accessoriesId, accessoriesName, accessoriesImage, accessoriesDetails }) {
   const artist = [
     {
       id: 1,
@@ -112,7 +114,79 @@ function App({ id, Name, categories, image, song, productId, productName, produc
       Company: 'Yamaha',
       price: 61900,
       previousPrice: 63000
+    },
+    {
+      productId: 8,
+      productName: 'Hummingbird Ultima, Exclusive, Autumnburst',
+      productImage: 'https://images.ctfassets.net/m8onsx4mm13s/5HXW07OllonLAtHAcDOomA/4ad0dce5fb608cd9fd58b94153d58479/SSHUABPSL0807_front.png?w=1200&h=1200',
+      productDetails: 'Select flame maple top, quilt maple back and sides, mahogany neck, ebony fretboard, ornate abalone binding and vine neck and headstock inlays, matching Hummingbird pickguard graphics',
+      Company: 'Gibson',
+      price: 90000,
+      previousPrice: 95000
+    },
+    {
+      productId: 9,
+      productName: '1969 ES-330TDW, Walnut',
+      productImage: 'https://images.ctfassets.net/m8onsx4mm13s/3umHXZi8entpwznKJbjsGy/5b6962efae5c75d6bdda32faa7113dd8/GCVP0034_front.png?w=1200&h=1200',
+      productDetails: 'Boasting the same dimensions as the ES-335, the ES-330 was its hollowbody cousin that debuted in 1959. Although the trend toward heavier guitar sounds at the time and its predisposition to feed back at high volume made it take a back seat to the ES-335, today, it’s appreciated as a versatile instrument for many styles of music.',
+      Company: 'Gibson',
+      price: 595000,
+      previousPrice: 650000
+    },
+    {
+      productId: 10,
+      productName: '70s Flying V, Antique Natural',
+      productImage: 'https://images.ctfassets.net/m8onsx4mm13s/24KThJws0bZLWcUTYtYsuN/28f672413a67a6b828443e181f25fae1/DSVS00ANCH1_front.png?w=1200&h=1200',
+      productDetails: 'The iconic 70s classic is ready to take flight again. With its bound rosewood fingerboard, SlimTaper™ neck, and a pair of uncovered 70s Tribute humbuckers™ hand-wired with Orange Drop® capacitors, this Flying V™ is set to nail all of the classic tones of the era.',
+      Company: 'Gibson',
+      price: 187425,
+      previousPrice: 190000
+    },
+    {
+      productId: 11,
+      productName: "SG Standard '61 Sideways Vibrola, Vintage Cherry",
+      productImage: 'https://images.ctfassets.net/m8onsx4mm13s/24KThJws0bZLWcUTYtYsuN/28f672413a67a6b828443e181f25fae1/DSVS00ANCH1_front.png?w=1200&h=1200',
+      productDetails: 'The SG™ Standard ‘61 Sideways Vibrola™ returns to the classic design that made it relevant, played, and loved -- shaping sound across generations and genres of music.',
+      Company: 'Gibson',
+      price: 179925,
+      previousPrice: 200000
     }
+    
+  ]
+
+  const accessories = [
+    {
+      accessoriesId: 1,
+      accessoriesName: 'Gibson Signature Series Calton Case, Hummingbird / J-45',
+      accessoriesImage: 'https://images.ctfassets.net/m8onsx4mm13s/5Yi7RnBY0fV2sckLT8JLvu/d2b70c2f472832cef3577f5266604a19/__static.gibson.com_product-images_Gibson_ASCLTCASE-DN_ASCLTCASE-DN_Calton2.png?w=1200&h=1200',
+      accessoriesDetails: 'Gibson Signature Series Calton Cases provide the ultimate protection for your treasured Gibson instrument. Made in Austin, Texas, and featuring designs that pay stylistic tribute to vintage Gibson cases, they perfectly fit the Gibson instruments they’re built to protect. Crush resistant, they can withstand up to 1,100 lb of pressure and are designed to keep your instrument safe from drops of up to 9 feet while also providing temperature and humidity regulation.',
+      Company: 'Gibson',
+      price: 112500
+    },
+    {
+      accessoriesId: 2,
+      accessoriesName: 'Flying V Modern Hardshell Case',
+      accessoriesImage: 'https://images.ctfassets.net/m8onsx4mm13s/3Rndc0N9WYlIBPYvgEakUG/a2ebb0b6f6c4660cac0a31a53b544794/ASFVCASE-MDR_front.png?w=1200&h=1200',
+      accessoriesDetails: "Gibson Signature Series Calton Cases provide the ultimate protection for your treasured Gibson instrument. Made in Austin, Texas, and featuring designs that pay stylistic tribute to vintage Gibson cases, they perfectly fit the Gibson instruments they’re built to protect. Crush resistant, they can withstand up to 1,100 lb of pressure and are designed to keep your instrument safe from drops of up to 9 feet while also providing temperature and humidity regulation.",
+      Company: 'Gibson',
+      price: 61425
+    },
+    {
+      accessoriesId: 3,
+      accessoriesName: 'Dave Mustaine Electric Guitar String Set, Signature Gauge',
+      accessoriesImage: 'https://images.ctfassets.net/m8onsx4mm13s/4o2iShfEG8IMZyQJYTqPpk/5a627d20f56598284c2ef5a263cda453/SEG-DM10__front.png?w=1200&h=1200',
+      accessoriesDetails: "Dave Mustaine is the legendary guitarist, vocalist, songwriter, and founder of the multi-platinum-selling and Grammy® Award-winning band, MEGADETH. Dave worked closely with Gibson to create a string set with the features and specifications that bring out the best in his signature Gibson electric guitars.",
+      Company: 'Gibson',
+      price: 1125
+    },
+    {
+      accessoriesId: 4,
+      accessoriesName: 'Gibson Headstock Tuner',
+      accessoriesImage: 'https://images.ctfassets.net/m8onsx4mm13s/2mw2WXR8e4wkYiW84HNp2s/eb5c60ac6fb9592d12d2e56754890362/GA-TUNER_display.png?w=1200&h=1200',
+      accessoriesDetails: "The Gibson Headstock Tuner precisely tunes guitars, basses, and other stringed instruments by analyzing string vibration instead of sound. The precise piezo sensor and vivid, multi-color display make tuning your instrument in noisy and dimly lit spaces simple.",
+      Company: 'Gibson',
+      price: 1500
+    },
   ]
   return (
     <>
@@ -128,6 +202,8 @@ function App({ id, Name, categories, image, song, productId, productName, produc
           <Route path='/ImageSlider' element={<ImageSlider />}></Route>
           <Route path='/About' element={<About product={products} />}></Route>
           <Route path='/DetailProduct/:id' element={<DetailProduct productDetail={products} />}></Route>
+          <Route path='/AllProducts' element={<AllProducts  product={products} />}></Route>
+          <Route path='/Accessories' element={<Accessories  accessories={accessories} />}></Route>
         </Routes>
       </Router>
     </>
